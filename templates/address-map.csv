@@ -1,0 +1,1 @@
+symbol,cpu_kseg0_start,cpu_kseg0_end,ps1_ram_start,ps1_ram_end,ra_start,ra_end,slus_file_start,slus_file_end,wa_user_start,wa_user_end,disc_lba_start,disc_lba_end,size_bytes,element_width,element_count,stride_bytes,role,producer_routine,consumer_routines,evidence_ids,confidence,notes

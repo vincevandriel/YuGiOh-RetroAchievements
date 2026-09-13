@@ -1,0 +1,1 @@
+fact_id,stage,claim,status,confidence,source_type,source_title,source_locator,source_revision,observed_at_utc,evidence_path,reproduction_id,corroborating_fact_ids,contradiction_ids,limitations,reviewer

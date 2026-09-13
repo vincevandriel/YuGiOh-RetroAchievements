@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-13T00:00:00Z",
+  "purpose": "Planning-time source pins. Execution must refresh live state and record new pins without silently replacing these.",
+  "repositories": [
+    {
+      "name": "RetroAchievements/rcheevos",
+      "url": "https://github.com/RetroAchievements/rcheevos",
+      "commit": "c28462eafdbeb881a1d442754dd17aae5c4ab834",
+      "observed_commit_time": "2026-09-11T08:30:11-06:00",
+      "role": "PlayStation hashing, client session behavior, runtime parsing, and memory map"
+    },
+    {
+      "name": "RetroAchievements/docs",
+      "url": "https://github.com/RetroAchievements/docs",
+      "commit": "644cee5675de48d827417c2766a583ff61cfe4a7",
+      "observed_commit_time": "2026-09-08T14:40:46-04:00",
+      "role": "Official game-identification, Hardcore, rules, and supported-emulator documentation"
+    },
+    {
+      "name": "RetroAchievements/RAWeb",
+      "url": "https://github.com/RetroAchievements/RAWeb",
+      "commit": "56cd88e57c6dc6994e130a918e3967f9b74e9eb9",
+      "observed_commit_time": "2026-09-11T15:02:58-04:00",
+      "role": "Public API behavior and server-side hash/session implementation"
+    },
+    {
+      "name": "libretro/RetroArch",
+      "url": "https://github.com/libretro/RetroArch",
+      "commit": "48cbdb2e78ea6c92ade103941c4958ea312a5995",
+      "observed_commit_time": "2026-09-13T16:31:42+02:00",
+      "role": "RetroArch rcheevos integration and Hardcore feature enforcement"
+    },
+    {
+      "name": "stenzek/duckstation",
+      "url": "https://github.com/stenzek/duckstation",
+      "commit": "96268ab66aa60c434c512bba19d45c75fa7a1b36",
+      "observed_commit_time": "2026-09-14T02:14:43+10:00",
+      "role": "Standalone PlayStation emulator hashing, media-change, memory, and Hardcore integration"
+    },
+    {
+      "name": "gonzaloberteri/ygofm-decomp",
+      "url": "https://github.com/gonzaloberteri/ygofm-decomp",
+      "commit": "18bcb5806cb3dff60d3d3ee7163ce55ff6884c00",
+      "observed_commit_time": "2026-07-29T17:31:46-03:00",
+      "role": "Matching SLUS-01411 decompilation, disc layout, function boundaries, symbols, and trace tooling"
+    },
+    {
+      "name": "Unchiga/YuGiOhForbiddenMemoriesRecomp",
+      "url": "https://github.com/Unchiga/YuGiOhForbiddenMemoriesRecomp",
+      "commit": "6b3579c6032fc59479a127824a27fc1f810e4f14",
+      "observed_commit_time": "2026-09-13T09:01:41-07:00",
+      "role": "Recent address and call-path leads requiring independent confirmation"
+    },
+    {
+      "name": "forbidden-memories-coding/fmscrambler",
+      "url": "https://github.com/forbidden-memories-coding/fmscrambler",
+      "commit": "94d442aed94bb30c74bb0d8fcc87209028d1acff",
+      "observed_commit_time": "2019-04-29T18:21:42+02:00",
+      "role": "Independent historical WA_MRG reward-table layout lead"
+    }
+  ],
+  "live_pages": [
+    {
+      "name": "RetroAchievements game 11388",
+      "url": "https://retroachievements.org/game/11388",
+      "observed_utc_date": "2026-09-13",
+      "observed": "216 core achievements, 1220 points"
+    },
+    {
+      "name": "RetroAchievements supported hashes for game 11388",
+      "url": "https://retroachievements.org/game/11388/hashes",
+      "observed_utc_date": "2026-09-13",
+      "observed": "one registered hash: b181396315dc9dd3656d5910ea65239b"
+    },
+    {
+      "name": "RetroAchievements code-note index for game 11388",
+      "url": "https://retroachievements.org/codenotes.php?g=11388",
+      "observed_utc_date": "2026-09-13",
+      "observed": "164 code notes; anonymous page did not expose note bodies"
+    }
+  ]
+}

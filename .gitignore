@@ -1,0 +1,54 @@
+# Lawfully supplied proprietary inputs and extracted game material
+private/
+inputs/private/
+raw/
+**/raw/
+*.bin
+*.cue
+*.iso
+*.img
+*.chd
+*.pbp
+*.mrg
+*.MRG
+SLUS_014.11
+slus_014.11
+*.state
+*.savestate
+*.mcr
+*.srm
+*.psv
+*.gme
+*.mem
+*.mc
+
+# Credentials and request captures
+.env
+.env.*
+*.token
+*.secret
+*credentials*
+*request-headers*
+*request-url*
+
+# Local tools, caches, builds, and temporary output
+work/
+build/
+out/
+tmp/
+.cache/
+RACache/
+__pycache__/
+*.pyc
+*.pdb
+
+# Raw memory and network captures must remain private
+*.dmp
+*.pcap
+*.pcapng
+*.har
+*.core
+*.mdmp
+
+# Keep the public evidence contract even though raw stage folders are ignored
+!evidence/README.md
