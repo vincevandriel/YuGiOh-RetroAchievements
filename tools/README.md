@@ -6,6 +6,12 @@ does not have to redesign the workflow.
 
 Tool names are contracts, not claims that implementation is complete.
 
+Implemented support utility:
+
+- `hash_psx.c` — a minimal read-only driver that invokes a selected rcheevos
+  revision's PlayStation hash API. It does not implement the algorithm itself
+  and does not echo the private input path.
+
 ## `snapshot-public-state`
 
 **Stage:** 1 and 11

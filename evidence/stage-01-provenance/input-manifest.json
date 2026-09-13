@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-09-13T21:39:11Z",
+  "handling": "Private paths and proprietary bytes are omitted. Labels identify ignored local inputs.",
+  "disc_input": {
+    "label": "PRIVATE_DISC_NTSC_U_TRACK_01",
+    "format": "BIN/CUE",
+    "track_mode": "MODE2/2352",
+    "cue_size_bytes": 100,
+    "cue_modified_utc": "2026-09-07T10:35:19Z",
+    "cue_sha256": "72467fb3a7ea6053a1925e33b7be716a95f4e99ebb7c66a767b1a551d8bd3dda",
+    "track_size_bytes": 517872768,
+    "track_sectors": 220184,
+    "track_modified_utc": "2026-09-07T10:35:19Z",
+    "track_sha1": "d5785a41900a10968d4a28a390666c4b9879b796",
+    "track_sha256": "6e22494a45bf50fa2d239cd3819a57163a5f9b91e0365babc3e101509b5c3a7c",
+    "identity_result": "ACCEPTED_NTSC_U",
+    "identity_basis": [
+      "SYSTEM.CNF boot entry identifies SLUS_014.11",
+      "whole-track SHA-1 matches the independent matching-decompilation reference",
+      "SLUS_014.11 SHA-1 matches the matching-decompilation target",
+      "pinned rcheevos computes the sole currently registered RA hash"
+    ]
+  },
+  "iso9660": {
+    "primary_volume_descriptor_lba": 16,
+    "logical_sector_bytes": 2048,
+    "raw_sector_bytes": 2352,
+    "mode2_form1_user_data_offset": 24,
+    "extraction_tool": "gonzaloberteri/ygofm-decomp tools/extract_disc.py",
+    "extraction_tool_revision": "18bcb5806cb3dff60d3d3ee7163ce55ff6884c00",
+    "extraction_tool_sha256": "8ba4178528a1bb55ec12ddc96d0d10cff48a91ce4c7ad7f2f660389945a5aa6b",
+    "file_count": 9
+  },
+  "system_cnf": {
+    "label": "EXTRACTED_SYSTEM_CNF",
+    "lba": 23,
+    "size_bytes": 68,
+    "sha1": "4cb5f5e98cb54748957245508a6fe1310441caeb",
+    "sha256": "61c627deaabe603b7b4bd48813a7e731dcc0b76a2c57bdb1c6ca774cfbc9daea",
+    "boot": "cdrom:\\SLUS_014.11;1",
+    "tcb": 4,
+    "event": 16,
+    "stack": "0x801FFF00"
+  },
+  "boot_executable": {
+    "label": "EXTRACTED_SLUS_014_11",
+    "iso_path": "SLUS_014.11",
+    "lba": 24,
+    "size_bytes": 1902592,
+    "sector_count": 929,
+    "sha1": "84747e64f6da8e764206ec203e489acf8c9dcf7d",
+    "sha256": "84a54ed74f3d0edd6d81380839f7e4ef5bfb21ecea18be9a062bd6bfa5a45c88",
+    "psx_exe_marker": "PS-X EXE",
+    "entry_point": "0x800129D8",
+    "global_pointer": "0x00000000",
+    "load_address": "0x80010000",
+    "declared_text_size_bytes": 1900544,
+    "header_size_bytes": 2048,
+    "declared_total_size_bytes": 1902592,
+    "initial_stack_pointer": "0x801FFFF0",
+    "declared_size_matches_extracted_size": true
+  },
+  "wa_mrg": {
+    "label": "EXTRACTED_WA_MRG",
+    "iso_path": "DATA/WA_MRG.MRG",
+    "lba": 10102,
+    "last_lba_inclusive": 28533,
+    "size_bytes": 37748736,
+    "sector_count": 18432,
+    "sha1": "4d85dfc2f2f872ab448de7d55788045ee37e60d4",
+    "sha256": "2026d85d3f224e04afc74e6fde70938195048883192fe845ffcadb8b286cc3f4"
+  },
+  "retroachievements_identification": {
+    "algorithm_implementation": "RetroAchievements/rcheevos rc_hash_generate for RC_CONSOLE_PLAYSTATION",
+    "rcheevos_revision": "c28462eafdbeb881a1d442754dd17aae5c4ab834",
+    "driver_source_sha256": "d86d50bb557a3d3aaf6f902fc320f5d7919738c1cd6fa6ccaf6ffd5cbcf54f80",
+    "private_driver_binary_sha256": "24fdf4b577ed740d870f59e64d08966743dea06bd623459ab6e3228cf82bb3c9",
+    "computed_hash": "b181396315dc9dd3656d5910ea65239b",
+    "registered_hash_match": true
+  }
+}

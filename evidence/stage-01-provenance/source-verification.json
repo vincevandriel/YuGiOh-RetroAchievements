@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "verified_utc": "2026-09-13T21:39:11Z",
+  "method": "Fetched origin, verified the pinned object as a commit, compared local HEAD with origin's default branch, and checked worktree cleanliness.",
+  "sources": [
+    {
+      "name": "RetroAchievements/rcheevos",
+      "url": "https://github.com/RetroAchievements/rcheevos",
+      "commit": "c28462eafdbeb881a1d442754dd17aae5c4ab834",
+      "local_head_matches_remote_default": true,
+      "clean": true
+    },
+    {
+      "name": "RetroAchievements/docs",
+      "url": "https://github.com/RetroAchievements/docs",
+      "commit": "644cee5675de48d827417c2766a583ff61cfe4a7",
+      "local_head_matches_remote_default": true,
+      "clean": true
+    },
+    {
+      "name": "RetroAchievements/RAWeb",
+      "url": "https://github.com/RetroAchievements/RAWeb",
+      "commit": "56cd88e57c6dc6994e130a918e3967f9b74e9eb9",
+      "local_head_matches_remote_default": true,
+      "clean": true
+    },
+    {
+      "name": "libretro/RetroArch",
+      "url": "https://github.com/libretro/RetroArch",
+      "commit": "48cbdb2e78ea6c92ade103941c4958ea312a5995",
+      "local_head_matches_remote_default": true,
+      "clean": true
+    },
+    {
+      "name": "stenzek/duckstation",
+      "url": "https://github.com/stenzek/duckstation",
+      "commit": "96268ab66aa60c434c512bba19d45c75fa7a1b36",
+      "local_head_matches_remote_default": true,
+      "clean": true
+    },
+    {
+      "name": "gonzaloberteri/ygofm-decomp",
+      "url": "https://github.com/gonzaloberteri/ygofm-decomp",
+      "commit": "18bcb5806cb3dff60d3d3ee7163ce55ff6884c00",
+      "local_head_matches_remote_default": true,
+      "clean": true
+    },
+    {
+      "name": "Unchiga/YuGiOhForbiddenMemoriesRecomp",
+      "url": "https://github.com/Unchiga/YuGiOhForbiddenMemoriesRecomp",
+      "commit": "6b3579c6032fc59479a127824a27fc1f810e4f14",
+      "local_head_matches_remote_default": true,
+      "clean": true
+    },
+    {
+      "name": "forbidden-memories-coding/fmscrambler",
+      "url": "https://github.com/forbidden-memories-coding/fmscrambler",
+      "commit": "94d442aed94bb30c74bb0d8fcc87209028d1acff",
+      "local_head_matches_remote_default": true,
+      "clean": true
+    }
+  ]
+}

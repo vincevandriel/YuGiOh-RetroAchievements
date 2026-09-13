@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-09-13T21:39:11Z",
+  "host": {
+    "os_family": "Windows",
+    "architecture": "x64"
+  },
+  "tools": [
+    {
+      "name": "Git",
+      "version": "2.53.0.windows.2"
+    },
+    {
+      "name": "Python",
+      "version": "3.10.11"
+    },
+    {
+      "name": "gcc command frontend",
+      "version": "clang 22.1.8, llvm-project ca7933e47d3a3451d81e72ac174dcb5aa28b59d1"
+    },
+    {
+      "name": "CMake",
+      "version": "3.31.12"
+    },
+    {
+      "name": "Ninja",
+      "version": "1.13.2"
+    },
+    {
+      "name": "ripgrep",
+      "version": "15.2.0, revision e89fff89ac"
+    },
+    {
+      "name": "ygofm-decomp extract_disc.py",
+      "revision": "18bcb5806cb3dff60d3d3ee7163ce55ff6884c00",
+      "sha256": "8ba4178528a1bb55ec12ddc96d0d10cff48a91ce4c7ad7f2f660389945a5aa6b"
+    },
+    {
+      "name": "hash_psx.c driver",
+      "sha256": "d86d50bb557a3d3aaf6f902fc320f5d7919738c1cd6fa6ccaf6ffd5cbcf54f80",
+      "rcheevos_revision": "c28462eafdbeb881a1d442754dd17aae5c4ab834"
+    }
+  ]
+}

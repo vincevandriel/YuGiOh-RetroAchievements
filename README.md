@@ -17,11 +17,13 @@ The audit must answer four questions:
 
 ## Current status
 
-**Planning baseline complete; investigation stages not yet executed.** The
-addresses in [Preliminary Leads](docs/PRELIMINARY_LEADS.md) are leads to verify,
-not final findings. No claim about an integrity gap is considered established
-until it passes the gates in the
-[Investigation Plan](docs/INVESTIGATION_PLAN.md) and the separate final audit.
+**Stages 0 and 1 complete; Stage 2 is next.** The safety charter and exact
+NTSC-U provenance gate passed. The accepted input's boot executable and pinned
+rcheevos hash match the intended game record. The addresses in
+[Preliminary Leads](docs/PRELIMINARY_LEADS.md) remain leads to verify, not final
+findings. No claim about an integrity gap is established until it passes the
+remaining gates in the [Investigation Plan](docs/INVESTIGATION_PLAN.md) and the
+separate final audit.
 
 ## Start here
 
@@ -35,6 +37,10 @@ until it passes the gates in the
   the plan.
 - [Evidence Directory Contract](evidence/README.md) — where each stage writes
   its public evidence.
+- [Stage 0 Charter](evidence/stage-00-charter/README.md) — passed scope, safety,
+  privacy, and handling gate.
+- [Stage 1 Provenance](evidence/stage-01-provenance/README.md) — passed target,
+  source, emulator, tool, and live-state identity gate.
 
 ## Safety boundary
 

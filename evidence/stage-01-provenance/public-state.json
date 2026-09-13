@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-09-13T21:39:11Z",
+  "retroachievements_deployment_visible_in_page_footer": "v2026.08.26-e093259",
+  "game": {
+    "id": 11388,
+    "title": "Yu-Gi-Oh! Forbidden Memories",
+    "console": "PlayStation",
+    "core_achievement_count": 216,
+    "core_points": 1220,
+    "url": "https://retroachievements.org/game/11388"
+  },
+  "supported_hashes": {
+    "count": 1,
+    "values": [
+      {
+        "hash": "b181396315dc9dd3656d5910ea65239b",
+        "label": "Yu-Gi-Oh! Forbidden Memories (USA)"
+      }
+    ],
+    "url": "https://retroachievements.org/game/11388/hashes"
+  },
+  "code_notes": {
+    "count": 164,
+    "anonymous_page_exposed_note_bodies": false,
+    "url": "https://retroachievements.org/codenotes.php?g=11388"
+  },
+  "officially_supported_playstation_implementations": [
+    {
+      "name": "Beetle PSX HW",
+      "type": "libretro core",
+      "official_note": "Most recommended."
+    },
+    {
+      "name": "Beetle PSX",
+      "type": "libretro core"
+    },
+    {
+      "name": "SwanStation",
+      "type": "libretro core"
+    },
+    {
+      "name": "DuckStation",
+      "type": "standalone emulator",
+      "official_note": "Documentation warns of possible memory leaks and/or burn-in when using save states in casual mode."
+    }
+  ],
+  "supported_emulator_source": "https://docs.retroachievements.org/general/emulator-support-and-issues.html",
+  "normalization_note": "Values were transcribed from the official pages at the stated UTC time. Dynamic player/activity values were intentionally excluded.",
+  "freshness_policy": "Refresh before Stage 5 acquisition, Stage 8 matrix closure, and Stage 11 final audit."
+}
