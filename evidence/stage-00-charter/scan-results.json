@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-09-13T21:31:33Z",
+  "repository_commit_scanned": "6d40a77166c8906afa46913cc0cc648da7aac153",
+  "tracked_file_count": 14,
+  "tracked_file_count_at_gate": 25,
+  "worktree_dirty_entry_count_before_stage": 0,
+  "prohibited_tracked_filename_hits": 0,
+  "secret_pattern_file_hits": 0,
+  "required_gitignore_patterns_present": true,
+  "result": "PASS",
+  "gate_rescan_utc": "2026-09-13T21:33:45Z",
+  "gate_rescan_prohibited_tracked_filename_hits": 0,
+  "gate_rescan_secret_pattern_file_hits": 0,
+  "limitations": [
+    "Pattern scanning supplements but does not replace review."
+  ]
+}

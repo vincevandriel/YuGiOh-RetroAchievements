@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "prohibited_tracked_path_patterns": [
+    "(^|/)(private|raw)/",
+    "\\.(bin|cue|iso|img|chd|pbp|mrg|state|savestate|mcr|srm|psv|gme|mem|mc|dmp|pcap|pcapng|har|core|mdmp)$",
+    "(^|/)SLUS_014\\.11$"
+  ],
+  "secret_content_patterns": [
+    "g[h]p_[A-Za-z0-9]{20,}",
+    "github_[p]at_[A-Za-z0-9_]{20,}",
+    "RA_API_[K]EY\\s*[:=]\\s*\\S+",
+    "[A]uthorization:\\s*(Bearer|Basic)\\s+\\S+",
+    "Set-[C]ookie:\\s*\\S+"
+  ],
+  "required_gitignore_patterns": [
+    "private/",
+    "**/raw/",
+    "*.mrg",
+    "SLUS_014.11",
+    "*.srm",
+    "*.har"
+  ],
+  "result_policy": "Any hit fails the stage and must be manually reviewed before any commit or push. No automatic deletion is authorized."
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "audit": "Yu-Gi-Oh! Forbidden Memories RetroAchievements integrity audit",
+  "target": {
+    "platform": "PlayStation",
+    "region_revision": "NTSC-U",
+    "boot_executable": "SLUS_014.11",
+    "retroachievements_game_id": 11388,
+    "game_id_requires_stage_1_refresh": true
+  },
+  "data_scope": [
+    "WA_MRG.MRG opponent deck and duel-reward records",
+    "resident reward arrays and record-adjacent RAM",
+    "rank and chosen-card result state",
+    "downstream inventory and star-chip state",
+    "executable routines that load, interpret, select, display, and award duel rewards"
+  ],
+  "integration_scope": {
+    "library": "RetroAchievements/rcheevos",
+    "frontends": [
+      "RetroArch",
+      "DuckStation"
+    ],
+    "planning_time_supported_playstation_implementations": [
+      "Beetle PSX HW",
+      "Beetle PSX",
+      "SwanStation",
+      "DuckStation"
+    ],
+    "requires_stage_1_supported_list_refresh": true
+  },
+  "authorized_profiles": {
+    "STOCK_OFFLINE_DEBUG": {
+      "target_content": "exact unmodified stock input only",
+      "retroachievements": "logged out or disabled before boot",
+      "allowed": [
+        "read-only breakpoints and traces",
+        "offline static analysis",
+        "compact derived hashes and event records"
+      ],
+      "forbidden": [
+        "memory or code writes",
+        "file or save modification",
+        "achievement or leaderboard submission"
+      ]
+    },
+    "STOCK_RA_OBSERVE": {
+      "target_content": "exact unmodified registered input only",
+      "retroachievements": "normal supported client",
+      "allowed": [
+        "ordinary boot and passive identification/session observation",
+        "ordinary play not targeted at a research unlock"
+      ],
+      "forbidden": [
+        "debugger writes or cheat features",
+        "modified content or emulator",
+        "test unlocks or leaderboard submissions"
+      ]
+    },
+    "SYNTHETIC_HASH_FIXTURE": {
+      "target_content": "fully generated non-game-derived PlayStation fixture only",
+      "retroachievements": "network disabled or mock client",
+      "allowed": [
+        "deterministic hash-boundary and error-path assertions"
+      ],
+      "forbidden": [
+        "any Forbidden Memories bytes",
+        "connection to a production RetroAchievements session"
+      ]
+    }
+  },
+  "prohibited_work": [
+    "bypass development or testing",
+    "concealment or anti-cheat evasion",
+    "instructions for altering target files while remaining undetected",
+    "modified-emulator experiments",
+    "modified-target RetroAchievements sessions",
+    "unlock or leaderboard submission experiments"
+  ],
+  "publication_boundary": {
+    "allowed": [
+      "hashes and metadata",
+      "addresses and narrow instruction evidence",
+      "call graphs and compact trace events",
+      "aggregate and derived tables",
+      "reproducible audit scripts without proprietary inputs"
+    ],
+    "never_commit": [
+      "disc images or extracted proprietary game files",
+      "save files or save states",
+      "raw RAM dumps or packet captures",
+      "credentials, API tokens, cookies, or authenticated headers",
+      "private absolute input paths",
+      "evasion-oriented procedures or tools"
+    ]
+  },
+  "stop_conditions": [
+    "RetroAchievements is unexpectedly active in an offline-debug profile",
+    "an unlock or leaderboard submission may occur",
+    "the target input is modified or its identity is unknown",
+    "a tool attempts to write target game, save, or emulator configuration data",
+    "a credential or authenticated header appears in output",
+    "a requested experiment would characterize concealment instead of integrity behavior"
+  ]
+}

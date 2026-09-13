@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "instructions": "Copy this file to private/private-input-locations.json. The private copy is ignored by Git. Replace placeholders locally and never commit it.",
+  "private_disc": "<PRIVATE_DISC_PATH>",
+  "temporary_extraction_directory": "<PRIVATE_EXTRACTION_DIRECTORY>",
+  "emulator_installations": {
+    "retroarch": "<RETROARCH_DIRECTORY>",
+    "duckstation": "<DUCKSTATION_DIRECTORY>"
+  },
+  "raw_evidence_directory": "<IGNORED_RAW_EVIDENCE_DIRECTORY>"
+}
