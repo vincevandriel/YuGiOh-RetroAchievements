@@ -1,0 +1,13 @@
+flowchart LR
+  W[WA_MRG.MRG at LBA 10102] --> R[Opponent record: 0x1800 bytes / 3 sectors]
+  R --> A0[Array 0: +0x0000, 722 x u16]
+  R --> G0[Gap: +0x05A4, 0x10]
+  R --> A1[Array 1: +0x05B4, 722 x u16]
+  R --> G1[Gap: +0x0B58, 0x10]
+  R --> A2[Array 2: +0x0B68, 722 x u16]
+  R --> G2[Gap: +0x110C, 0x10]
+  R --> A3[Array 3: +0x111C, 722 x u16]
+  R --> G3[Gap: +0x16C0, 0x10]
+  R --> RK[Candidate rank data: +0x16D0, 0xC8]
+  R --> T[Unknown tail: +0x1798, 0x68]
+  R -. load destination lead .-> M[CPU 0x801781D8 / RA 0x1781D8]

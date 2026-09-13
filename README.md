@@ -17,7 +17,7 @@ The audit must answer four questions:
 
 ## Current status
 
-**Stages 0 and 1 complete; Stage 2 is next.** The safety charter and exact
+**Stages 0–2 complete; Stage 3 is next.** The safety charter and exact
 NTSC-U provenance gate passed. The accepted input's boot executable and pinned
 rcheevos hash match the intended game record. The addresses in
 [Preliminary Leads](docs/PRELIMINARY_LEADS.md) remain leads to verify, not final

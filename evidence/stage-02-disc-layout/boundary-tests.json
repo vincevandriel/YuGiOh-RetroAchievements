@@ -1,0 +1,363 @@
+{
+  "schema_version": 1,
+  "translation": {
+    "cpu_to_ps1_ram": "address & 0x001FFFFF",
+    "ra_for_main_ram": "RA equals PS1 physical RAM offset",
+    "record_cpu_start": "0x801781D8",
+    "record_ra_start": "0x1781D8"
+  },
+  "regions": [
+    {
+      "region": "record",
+      "size": 6144,
+      "cpu_start": "0x801781D8",
+      "cpu_end_inclusive": "0x801799D7",
+      "ra_start": "0x1781D8",
+      "ra_end_inclusive": "0x1799D7",
+      "round_trip_start": "0x801781D8",
+      "round_trip_end": "0x801799D7",
+      "overlap_vectors": [
+        {
+          "read_start": "0x1781D8",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1799D7",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1781D6",
+          "read_size": 4,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1799D8",
+          "read_size": 1,
+          "expected_overlap": false
+        }
+      ]
+    },
+    {
+      "region": "array_0",
+      "size": 1444,
+      "cpu_start": "0x801781D8",
+      "cpu_end_inclusive": "0x8017877B",
+      "ra_start": "0x1781D8",
+      "ra_end_inclusive": "0x17877B",
+      "round_trip_start": "0x801781D8",
+      "round_trip_end": "0x8017877B",
+      "overlap_vectors": [
+        {
+          "read_start": "0x1781D8",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x17877B",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1781D6",
+          "read_size": 4,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x17877C",
+          "read_size": 1,
+          "expected_overlap": false
+        }
+      ]
+    },
+    {
+      "region": "gap_0",
+      "size": 16,
+      "cpu_start": "0x8017877C",
+      "cpu_end_inclusive": "0x8017878B",
+      "ra_start": "0x17877C",
+      "ra_end_inclusive": "0x17878B",
+      "round_trip_start": "0x8017877C",
+      "round_trip_end": "0x8017878B",
+      "overlap_vectors": [
+        {
+          "read_start": "0x17877C",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x17878B",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x17877A",
+          "read_size": 4,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x17878C",
+          "read_size": 1,
+          "expected_overlap": false
+        }
+      ]
+    },
+    {
+      "region": "array_1",
+      "size": 1444,
+      "cpu_start": "0x8017878C",
+      "cpu_end_inclusive": "0x80178D2F",
+      "ra_start": "0x17878C",
+      "ra_end_inclusive": "0x178D2F",
+      "round_trip_start": "0x8017878C",
+      "round_trip_end": "0x80178D2F",
+      "overlap_vectors": [
+        {
+          "read_start": "0x17878C",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x178D2F",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x17878A",
+          "read_size": 4,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x178D30",
+          "read_size": 1,
+          "expected_overlap": false
+        }
+      ]
+    },
+    {
+      "region": "gap_1",
+      "size": 16,
+      "cpu_start": "0x80178D30",
+      "cpu_end_inclusive": "0x80178D3F",
+      "ra_start": "0x178D30",
+      "ra_end_inclusive": "0x178D3F",
+      "round_trip_start": "0x80178D30",
+      "round_trip_end": "0x80178D3F",
+      "overlap_vectors": [
+        {
+          "read_start": "0x178D30",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x178D3F",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x178D2E",
+          "read_size": 4,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x178D40",
+          "read_size": 1,
+          "expected_overlap": false
+        }
+      ]
+    },
+    {
+      "region": "array_2",
+      "size": 1444,
+      "cpu_start": "0x80178D40",
+      "cpu_end_inclusive": "0x801792E3",
+      "ra_start": "0x178D40",
+      "ra_end_inclusive": "0x1792E3",
+      "round_trip_start": "0x80178D40",
+      "round_trip_end": "0x801792E3",
+      "overlap_vectors": [
+        {
+          "read_start": "0x178D40",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1792E3",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x178D3E",
+          "read_size": 4,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1792E4",
+          "read_size": 1,
+          "expected_overlap": false
+        }
+      ]
+    },
+    {
+      "region": "gap_2",
+      "size": 16,
+      "cpu_start": "0x801792E4",
+      "cpu_end_inclusive": "0x801792F3",
+      "ra_start": "0x1792E4",
+      "ra_end_inclusive": "0x1792F3",
+      "round_trip_start": "0x801792E4",
+      "round_trip_end": "0x801792F3",
+      "overlap_vectors": [
+        {
+          "read_start": "0x1792E4",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1792F3",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1792E2",
+          "read_size": 4,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1792F4",
+          "read_size": 1,
+          "expected_overlap": false
+        }
+      ]
+    },
+    {
+      "region": "array_3",
+      "size": 1444,
+      "cpu_start": "0x801792F4",
+      "cpu_end_inclusive": "0x80179897",
+      "ra_start": "0x1792F4",
+      "ra_end_inclusive": "0x179897",
+      "round_trip_start": "0x801792F4",
+      "round_trip_end": "0x80179897",
+      "overlap_vectors": [
+        {
+          "read_start": "0x1792F4",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x179897",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1792F2",
+          "read_size": 4,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x179898",
+          "read_size": 1,
+          "expected_overlap": false
+        }
+      ]
+    },
+    {
+      "region": "gap_3",
+      "size": 16,
+      "cpu_start": "0x80179898",
+      "cpu_end_inclusive": "0x801798A7",
+      "ra_start": "0x179898",
+      "ra_end_inclusive": "0x1798A7",
+      "round_trip_start": "0x80179898",
+      "round_trip_end": "0x801798A7",
+      "overlap_vectors": [
+        {
+          "read_start": "0x179898",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1798A7",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x179896",
+          "read_size": 4,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1798A8",
+          "read_size": 1,
+          "expected_overlap": false
+        }
+      ]
+    },
+    {
+      "region": "rank_candidate",
+      "size": 200,
+      "cpu_start": "0x801798A8",
+      "cpu_end_inclusive": "0x8017996F",
+      "ra_start": "0x1798A8",
+      "ra_end_inclusive": "0x17996F",
+      "round_trip_start": "0x801798A8",
+      "round_trip_end": "0x8017996F",
+      "overlap_vectors": [
+        {
+          "read_start": "0x1798A8",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x17996F",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1798A6",
+          "read_size": 4,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x179970",
+          "read_size": 1,
+          "expected_overlap": false
+        }
+      ]
+    },
+    {
+      "region": "tail",
+      "size": 104,
+      "cpu_start": "0x80179970",
+      "cpu_end_inclusive": "0x801799D7",
+      "ra_start": "0x179970",
+      "ra_end_inclusive": "0x1799D7",
+      "round_trip_start": "0x80179970",
+      "round_trip_end": "0x801799D7",
+      "overlap_vectors": [
+        {
+          "read_start": "0x179970",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1799D7",
+          "read_size": 1,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x17996E",
+          "read_size": 4,
+          "expected_overlap": true
+        },
+        {
+          "read_start": "0x1799D8",
+          "read_size": 1,
+          "expected_overlap": false
+        }
+      ]
+    }
+  ]
+}
