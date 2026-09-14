@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "phase": "R1",
+  "phase_name": "Resume checkpoint and execution readiness",
+  "observed_utc": "2026-09-14T22:54:19Z",
+  "result": "BLOCKED-INPUT",
+  "model_assignment": {
+    "required_model": "gpt-5.6-terra",
+    "required_reasoning_effort": "medium",
+    "actual_model_and_effort": "NOT_EXPOSED_BY_TASK_HOST",
+    "escalation": "NONE",
+    "accounting_note": "The phase assignment is recorded, but this task host did not expose a machine-readable runtime model/effort value. No escalation was requested or used for the R1 checks."
+  },
+  "checkpoint": {
+    "canonical_stage_0_to_3_result": "PASS_REVALIDATED",
+    "current_commit": "8414041bda1296e3c39d5ce608e9afe18dcd24fd",
+    "upstream_main_commit": "8414041bda1296e3c39d5ce608e9afe18dcd24fd",
+    "working_tree": "CLEAN_AT_R1_CHECK",
+    "canonical_stage_4_started": false
+  },
+  "private_input": {
+    "label": "PRIVATE_DISC_NTSC_U_TRACK_01",
+    "expected_track_sha256": "6e22494a45bf50fa2d239cd3819a57163a5f9b91e0365babc3e101509b5c3a7c",
+    "expected_cue_sha256": "72467fb3a7ea6053a1925e33b7be716a95f4e99ebb7c66a767b1a551d8bd3dda",
+    "result": "NOT_RESOLVED_IN_ESTABLISHED_G_DRIVE_SCOPE",
+    "conclusion": "No modified-input conclusion is permitted. Game-specific dynamic work is blocked until the exact accepted input is supplied through an ignored local location."
+  },
+  "runtime_profiles": {
+    "STOCK_OFFLINE_DEBUG": "RECONFIRMED_REQUIRED_BEFORE_R2_A",
+    "STOCK_RA_OBSERVE": "NOT_STARTED",
+    "SYNTHETIC_HASH_FIXTURE": "NOT_STARTED",
+    "rule": "No debugger may be connected to RetroAchievements."
+  },
+  "next_eligible_phase": null,
+  "blocker": "The R1 pass gate requires the accepted stock input identity to be reverified."
+}

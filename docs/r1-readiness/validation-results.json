@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-09-14T22:54:19Z",
+  "result": "PASS_WITH_INPUT_BLOCKER_RECORDED",
+  "checks": [
+    {
+      "name": "stage_00_artifact_manifest",
+      "result": "PASS",
+      "detail": "Every file listed by artifacts.sha256 matched its recorded SHA-256."
+    },
+    {
+      "name": "stage_01_artifact_manifest",
+      "result": "PASS",
+      "detail": "Every file listed by artifacts.sha256 matched its recorded SHA-256."
+    },
+    {
+      "name": "stage_02_public_validator",
+      "result": "PASS",
+      "detail": "tools/validate_stage2.py exited zero."
+    },
+    {
+      "name": "stage_03_public_validator",
+      "result": "PASS",
+      "detail": "tools/validate_stage3.py exited zero."
+    },
+    {
+      "name": "stage_00_to_03_artifact_manifests",
+      "result": "PASS",
+      "detail": "All four artifact manifests reproduced exactly."
+    },
+    {
+      "name": "json_and_csv_schema_check",
+      "result": "PASS",
+      "detail": "Seven required JSON artifacts parsed; eight fact/contradiction ledgers had valid nonempty schemas. Stage 3's documented stage-specific contradiction schema was accepted."
+    },
+    {
+      "name": "prohibited_path_and_secret_scan",
+      "result": "PASS",
+      "detail": "Zero prohibited tracked-path hits, zero secret-pattern file hits, and all required .gitignore rules were present."
+    },
+    {
+      "name": "git_whitespace_and_remote_alignment",
+      "result": "PASS",
+      "detail": "git diff --check passed; local HEAD and origin/main both resolved to 8414041bda1296e3c39d5ce608e9afe18dcd24fd."
+    },
+    {
+      "name": "private_input_identity",
+      "result": "BLOCKED-INPUT",
+      "detail": "Neither the expected CUE digest nor the expected whole-track digest was found in the established G drive emulation scope. This is not evidence of content change."
+    }
+  ]
+}

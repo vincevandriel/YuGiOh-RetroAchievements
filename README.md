@@ -34,6 +34,9 @@ is established until it passes the later gates and separate final audit.
   reasoning assignments.
 - [Model and Reasoning Allocation Audit](docs/MODEL_REASONING_AUDIT.md) — review
   of the proposed Terra/Sol ladder, escalation rules, and credit controls.
+- [R1 Readiness Artifacts](docs/r1-readiness/README.md) — current resume-gate
+  validation, freshness delta, and R2 workstream readiness. R1 is
+  `BLOCKED-INPUT` until the exact accepted stock disc is re-located.
 - [Evidence Standard](docs/EVIDENCE_STANDARD.md) — fact IDs, confidence rules,
   contradiction handling, address notation, and repository rules.
 - [Preliminary Leads](docs/PRELIMINARY_LEADS.md) — source-grounded hypotheses
