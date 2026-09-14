@@ -19,6 +19,11 @@
       "detail": "All selected source-file SHA-256 values were collected from the pinned local files."
     },
     {
+      "name": "bounded_bundled_source_provenance",
+      "result": "PASS",
+      "detail": "The selected bundled and upstream rc_client.c files matched exactly; the one selected hash_disc.c diff hunk was verified to begin after upstream rc_hash_psx ends."
+    },
+    {
       "name": "private_content_scan",
       "result": "PASS",
       "detail": "No private disc path, proprietary disc byte, credential, cookie, or authenticated response is present in this initial packet."

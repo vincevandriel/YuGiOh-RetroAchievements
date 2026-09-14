@@ -9,6 +9,12 @@ the current supported PlayStation integrations.
 
 `IN_PROGRESS` as of 2026-09-14T23:21:54Z.
 
+The first bounded source-review pass is complete. It resolved the selected
+RetroArch bundled-source provenance difference and added the initial
+load/frame/media/reset/memory-reader skeleton. The packet remains in progress
+until the complete candidate inventory and per-integration handoff are
+validated.
+
 The packet intentionally does **not** close canonical Stages 7 or 8. It does
 not claim that an unreviewed candidate path is reachable in a released binary,
 that a source-only path represents an installed binary, or that a feature gate
@@ -39,6 +45,8 @@ run the planned safe fixture tests before any bounded negative conclusion.
   source-mapping confidence limits.
 - `candidate-searches.csv` — reproducible searches and their disposition as
   leads rather than conclusions.
+- `source-review-notes.md` — bounded source observations and explicit
+  non-conclusions from the first review pass.
 - `facts.csv` and `contradictions.csv` — the initial ledger state.
 
 The R2-C pass gate still requires all acquisition output digests, a complete
