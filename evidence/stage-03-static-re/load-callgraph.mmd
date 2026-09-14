@@ -1,0 +1,18 @@
+flowchart TD
+  A["script dispatch entry 0x80090EE0<br/>FN-019 / STATIC-OPP-002"] -->|"indirect entry to 0x80038530"| B["func_80038530<br/>writes opponent selector at 0x8003856C"]
+  C["func_80030F40"] -->|"jal 0x80030F68"| D["func_80024DC8<br/>writes selector at 0x80024DF0"]
+  E["func_8002DC38"] -->|"jal 0x8002DD3C; selector=-1"| D
+  B --> F["global 0x8009B361"]
+  D --> F
+  F -->|"lb 0x8002CF28"| G["func_8002CEE8 duel state"]
+  G -->|"jal 0x8002D014"| H["func_800179F4 loader"]
+  H -->|"sector=0x1D33+3*selector; jal 0x80017AE8"| I["func_80014E1C"]
+  I -->|"jal 0x80014EB8"| J["func_80013998 / func_80013940<br/>bytes=0x1800; destination=0x801781D8"]
+  J --> K["queued request descriptor"]
+  K -->|"scheduler 0x80013130 -> 0x80014B08"| L["func_8001455C"]
+  L -->|"DsPacket at 0x80014A1C<br/>DslReadN command 6"| M["Psy-Q asynchronous disc read"]
+  M -->|"ready callback 0x80013C28"| N["func_8007E3D0 -> CD_getsector<br/>3 x 0x800 bytes"]
+  N --> O["resident record<br/>0x801781D8-0x801799D7"]
+  H -->|"alloc actor index 16..95 via 0x8004002C/0x800400AC"| P["actor pool pointer<br/>0x800F0548-0x800F27D8"]
+  P -->|"state 0x80020F4C; jal 0x80021124<br/>destination actor-0x1800"| Q["auxiliary copy<br/>0x800EED48-0x800F0FD8"]
+  Q -. "proven non-overlap" .-> O

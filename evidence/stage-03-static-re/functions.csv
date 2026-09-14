@@ -1,0 +1,25 @@
+function_id,start,end_inclusive,inherited_name,proven_role,direct_callers_or_dispatch,confidence,evidence
+FN-001,0x800137E4,0x80013894,func_800137E4,I/O wait and scheduler pump,29 direct calls,High,instruction-windows.csv and direct-call-xrefs.csv
+FN-002,0x80013940,0x80013994,func_80013940,request byte-offset and byte-count constructor,0x800139D4 and 0x80013AC4,High,instruction-windows.csv
+FN-003,0x80013998,0x80013A90,func_80013998,request descriptor constructor,0x80014DDC;0x80014EB8;0x80014F7C;0x80015108,High,instruction-windows.csv
+FN-004,0x80013C28,0x8001409C,func_80013C28,sector-ready callback and destination copier,callback registered at 0x800140F8,High,instruction-windows.csv
+FN-005,0x800140A0,0x80014130,func_800140A0,disc-packet callback and retry handler,callback argument at 0x80014A20,High,instruction-windows.csv
+FN-006,0x8001455C,0x80014A58,func_8001455C,disc request state machine,0x80014B08,High,direct-call-xrefs.csv
+FN-007,0x80014A5C,0x80014B2C,func_80014A5C,scheduler bridge,0x80013130,High,instruction-windows.csv and direct-call-xrefs.csv
+FN-008,0x80014E1C,0x80014EE8,func_80014E1C,record request wrapper,21 direct calls including 0x80017AE8,High,instruction-windows.csv
+FN-009,0x800179F4,0x80017DB0,func_800179F4,duel asset and opponent-record loader,0x8002D014 only,High,direct-call-xrefs.csv and instruction-windows.csv
+FN-010,0x80021558,0x80021594,func_80021558,rank threshold lookup,10 direct calls in func_80021598,High,direct-call-xrefs.csv and instruction-windows.csv
+FN-011,0x80021598,0x8002180C,func_80021598,duel score/rank component builder,0x80021A2C only,High,direct-call-xrefs.csv and instruction-windows.csv
+FN-012,0x80021810,0x80021890,func_80021810,weighted duel-reward selection,0x80021C60 only,High,direct-call-xrefs.csv and pointer-xrefs.csv
+FN-013,0x80021894,0x800218EC,func_80021894,inventory count and new-card history update,0x80021F14 only,High,direct-call-xrefs.csv and pointer-xrefs.csv
+FN-014,0x800218F0,0x800220B4,func_800218F0,duel-result rank tier roll storage and award state,dispatch pointer at SLUS-FILE 0x811CC,High,pointer-xrefs.csv and instruction-windows.csv
+FN-015,0x800243F4,0x8002459C,func_800243F4,40-card deck builder from fixed or weighted source,0x800245C0 and 0x800245D0,High,direct-call-xrefs.csv and instruction-windows.csv
+FN-016,0x800245A0,0x800245E8,func_800245A0,two-side deck setup,0x80017D94,High,direct-call-xrefs.csv and instruction-windows.csv
+FN-017,0x80024DC8,0x80024E24,func_80024DC8,duel-global setup including opponent selector writer,0x8002DD3C and 0x80030F68,High,direct-call-xrefs.csv and instruction-windows.csv
+FN-018,0x8002CEE8,0x8002D0DC,func_8002CEE8,duel state machine that invokes asset loader,game-state dispatch,High,instruction-windows.csv
+FN-019,0x80038530,0x8003868C,func_80038530,script-driven duel setup and opponent selector writer,dispatch pointer at SLUS-FILE 0x816E0,High,pointer-xrefs.csv and instruction-windows.csv
+FN-020,0x8003F87C,0x8003F8D0,func_8003F87C,copy resident save image into memory-card write workflow,0x8002DAE8 and 0x8002F3B0,High,direct-call-xrefs.csv and instruction-windows.csv
+FN-021,0x8007B468,UNRESOLVED,DsPacket,Psy-Q queued disc command,Psy-Q callers including 0x80014A1C,High,direct-call-xrefs.csv and Psy-Q LIBOVR documentation
+FN-022,0x8007E3D0,0x8007E3EC,func_8007E3D0,wrapper around CD_getsector,"five direct callers; state-1 record path at 0x80013CCC",High,direct-call-xrefs.csv
+FN-023,0x8007E3F0,UNRESOLVED,CD_getsector,Psy-Q sector transfer primitive,0x8007E3D8,High,direct-call-xrefs.csv and matching-decomp library symbol map
+FN-024,0x80020F4C,0x8002147C,func_80020F4C,duel-UI state with auxiliary opponent-record request,game-state dispatch,High,instruction-windows.csv and pointer-xrefs.csv

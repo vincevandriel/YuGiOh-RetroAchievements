@@ -6,11 +6,18 @@ does not have to redesign the workflow.
 
 Tool names are contracts, not claims that implementation is complete.
 
-Implemented support utility:
+Implemented support utilities:
 
 - `hash_psx.c` — a minimal read-only driver that invokes a selected rcheevos
   revision's PlayStation hash API. It does not implement the algorithm itself
   and does not echo the private input path.
+- `derive_record_layout.py` — Stage 2's deterministic private-data geometry and
+  aggregate-statistics generator.
+- `disassemble_psx_window.py` — a hash-gated narrow PS-X EXE disassembler.
+- `analyze_psx_static.py` — Stage 3's bounded call/pointer/constant scan and
+  allowlisted instruction-window generator; it emits no private path.
+- `validate_stage2.py` and `validate_stage3.py` — fail-closed public evidence
+  validators for their respective gates.
 
 ## `snapshot-public-state`
 

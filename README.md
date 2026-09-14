@@ -17,13 +17,13 @@ The audit must answer four questions:
 
 ## Current status
 
-**Stages 0–2 complete; Stage 3 is next.** The safety charter and exact
-NTSC-U provenance gate passed. The accepted input's boot executable and pinned
-rcheevos hash match the intended game record. The addresses in
-[Preliminary Leads](docs/PRELIMINARY_LEADS.md) remain leads to verify, not final
-findings. No claim about an integrity gap is established until it passes the
-remaining gates in the [Investigation Plan](docs/INVESTIGATION_PLAN.md) and the
-separate final audit.
+**Stages 0–3 complete; paused before Stage 4.** The exact static graph now
+identifies the opponent-record loader, asynchronous three-sector read,
+deck/rank/reward consumers, tier decision, selected-card path, inventory/history
+mutation, and save inclusion. The bounded stock-code review found no
+game-native record-content validation, at Medium confidence pending runtime
+corroboration. No claim about RetroAchievements or emulator integrity behavior
+is established until it passes the later gates and separate final audit.
 
 ## Start here
 

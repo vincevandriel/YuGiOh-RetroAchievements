@@ -1,0 +1,11 @@
+flowchart TD
+  A["func_80021810 return"] -->|"0x80021C74"| B["0x8009B338 result-card global"]
+  A -->|"0x80021C78"| C["result+0x3C / 0x80179A14"]
+  A -->|"0x80021C84"| D["0x801D56A8 presentation value"]
+  B -->|"read by result/UI command path 0x80037DFC etc."| E["results presentation machinery"]
+  C -->|"lh 0x80021F10; jal 0x80021F14"| F["func_80021894"]
+  F --> G["save image trunk byte<br/>0x801D024F + card id; cap 250"]
+  F --> H["16-entry new-card history<br/>0x801D07BC"]
+  G --> I["func_8003F87C copies 0x680-byte save image"]
+  H --> I
+  I --> J["memory-card write workflow via func_8003F758"]

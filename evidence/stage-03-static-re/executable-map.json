@@ -1,0 +1,14 @@
+{
+  "format": "PS-X EXE",
+  "input_sha256": "84a54ed74f3d0edd6d81380839f7e4ef5bfb21ecea18be9a062bd6bfa5a45c88",
+  "entry": "0x800129D8",
+  "initial_gp": "0x00000000",
+  "load_address": "0x80010000",
+  "declared_text_size": 1900544,
+  "file_size": 1902592,
+  "analysis_start": "0x80012800",
+  "analysis_end_exclusive": "0x800906E0",
+  "analyzed_bytes": 515808,
+  "decoder": "capstone-5.0.6",
+  "private_path_recorded": false
+}

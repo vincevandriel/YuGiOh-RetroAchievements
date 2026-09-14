@@ -1,0 +1,12 @@
+flowchart TD
+  A["rank input fields"] -->|"10 jal sites 0x80021660-0x800217C8"| B["func_80021558<br/>rank threshold table 0x801798A8"]
+  B --> C["func_80021598<br/>composite result score"]
+  C -->|"jal 0x80021A2C"| D["func_800218F0"]
+  D --> E{"group byte result+0x38 < 3?"}
+  E -->|yes| F["tier 1: B/C/D array<br/>0x80178D40"]
+  E -->|no; side flag 0| G["tier 0: S/A POW array<br/>0x8017878C"]
+  E -->|no; side flag nonzero| H["tier 2: S/A TEC array<br/>0x801792F4"]
+  F --> I["func_80021810 at jal 0x80021C60"]
+  G --> I
+  H --> I
+  I --> J["rng & 0x7FF + 1<br/>722 unsigned weights<br/>first cumulative crossing -> card id"]

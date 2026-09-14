@@ -1,0 +1,5 @@
+target,target_role,file_offset,mapped_cpu_address
+0x80020F4C,duel_ui_auxiliary_record_loader,0x000811C8,0x800909C8
+0x80024E58,generic_indexed_asset_loader,0x00081268,0x80090A68
+0x800218F0,duel_result_state,0x000811CC,0x800909CC
+0x80038530,script_duel_setup,0x000816E0,0x80090EE0

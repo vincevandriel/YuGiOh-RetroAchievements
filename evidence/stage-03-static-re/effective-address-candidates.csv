@@ -1,0 +1,5 @@
+region,effective_address,access,width,cpu_address,mnemonic,operands,constant_origin,disposition
+resident_record,0x801781D8,read,2,0x80024474,lhu,"$v0, ($v1)",0x80024448,range-readers-or-range-writers.csv
+resident_record,0x801781D8,read,1,0x80024490,lbu,"$v0, ($v1)",0x80024448,range-readers-or-range-writers.csv
+resident_record,0x801781D8,read,1,0x800244B4,lbu,"$v0, ($v1)",0x80024448,range-readers-or-range-writers.csv
+resident_record,0x801781D8,write,1,0x800244C4,sb,"$v0, ($v1)",0x80024448,range-readers-or-range-writers.csv
