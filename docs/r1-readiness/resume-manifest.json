@@ -2,8 +2,8 @@
   "schema_version": 1,
   "phase": "R1",
   "phase_name": "Resume checkpoint and execution readiness",
-  "observed_utc": "2026-09-14T22:54:19Z",
-  "result": "BLOCKED-INPUT",
+  "observed_utc": "2026-09-14T23:05:32Z",
+  "result": "PASS",
   "model_assignment": {
     "required_model": "gpt-5.6-terra",
     "required_reasoning_effort": "medium",
@@ -13,24 +13,26 @@
   },
   "checkpoint": {
     "canonical_stage_0_to_3_result": "PASS_REVALIDATED",
-    "current_commit": "8414041bda1296e3c39d5ce608e9afe18dcd24fd",
-    "upstream_main_commit": "8414041bda1296e3c39d5ce608e9afe18dcd24fd",
-    "working_tree": "CLEAN_AT_R1_CHECK",
+    "current_commit": "c9ba670168215d70cd53dcf4b5ff0a2770a7ce5c",
+    "upstream_main_commit": "c9ba670168215d70cd53dcf4b5ff0a2770a7ce5c",
+    "working_tree": "CLEAN_BEFORE_R1_ARTIFACT_REFRESH",
     "canonical_stage_4_started": false
   },
   "private_input": {
     "label": "PRIVATE_DISC_NTSC_U_TRACK_01",
     "expected_track_sha256": "6e22494a45bf50fa2d239cd3819a57163a5f9b91e0365babc3e101509b5c3a7c",
     "expected_cue_sha256": "72467fb3a7ea6053a1925e33b7be716a95f4e99ebb7c66a767b1a551d8bd3dda",
-    "result": "NOT_RESOLVED_IN_ESTABLISHED_G_DRIVE_SCOPE",
-    "conclusion": "No modified-input conclusion is permitted. Game-specific dynamic work is blocked until the exact accepted input is supplied through an ignored local location."
+    "expected_track_size_bytes": 517872768,
+    "result": "RESOLVED_VERIFIED",
+    "verified_copy_count": 2,
+    "conclusion": "Two ignored local BIN/CUE copies independently matched the recorded CUE SHA-256, whole-track SHA-256, and expected track size. No path, proprietary bytes, or copy-specific metadata is published."
   },
   "runtime_profiles": {
-    "STOCK_OFFLINE_DEBUG": "RECONFIRMED_REQUIRED_BEFORE_R2_A",
+    "STOCK_OFFLINE_DEBUG": "EXPLICIT; BLOCKED-SAFETY UNTIL A READ-ONLY BREAKPOINT/WATCHPOINT ROUTE IS VERIFIED WITH RA DISABLED BEFORE BOOT",
     "STOCK_RA_OBSERVE": "NOT_STARTED",
     "SYNTHETIC_HASH_FIXTURE": "NOT_STARTED",
     "rule": "No debugger may be connected to RetroAchievements."
   },
-  "next_eligible_phase": null,
-  "blocker": "The R1 pass gate requires the accepted stock input identity to be reverified."
+  "next_eligible_phase": "R2 workstreams according to docs/r1-readiness/workstream-readiness.csv",
+  "blocker": null
 }

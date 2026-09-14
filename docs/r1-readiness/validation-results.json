@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "observed_utc": "2026-09-14T22:54:19Z",
-  "result": "PASS_WITH_INPUT_BLOCKER_RECORDED",
+  "observed_utc": "2026-09-14T23:05:32Z",
+  "result": "PASS",
   "checks": [
     {
       "name": "stage_00_artifact_manifest",
@@ -26,7 +26,7 @@
     {
       "name": "stage_00_to_03_artifact_manifests",
       "result": "PASS",
-      "detail": "All four artifact manifests reproduced exactly."
+      "detail": "All four artifact manifests reproduced exactly before this R1 refresh."
     },
     {
       "name": "json_and_csv_schema_check",
@@ -41,12 +41,22 @@
     {
       "name": "git_whitespace_and_remote_alignment",
       "result": "PASS",
-      "detail": "git diff --check passed; local HEAD and origin/main both resolved to 8414041bda1296e3c39d5ce608e9afe18dcd24fd."
+      "detail": "git diff --check passed; local HEAD and origin/main both resolved to c9ba670168215d70cd53dcf4b5ff0a2770a7ce5c before this R1 refresh."
     },
     {
       "name": "private_input_identity",
-      "result": "BLOCKED-INPUT",
-      "detail": "Neither the expected CUE digest nor the expected whole-track digest was found in the established G drive emulation scope. This is not evidence of content change."
+      "result": "PASS",
+      "detail": "Two ignored local BIN/CUE pairs independently matched expected CUE SHA-256, whole-track SHA-256, and 517872768-byte track size. No path or proprietary bytes were recorded."
+    },
+    {
+      "name": "source_pin_identity",
+      "result": "PASS",
+      "detail": "All eight local source checkouts were clean, at their pinned commits, and contained the pinned object as a commit."
+    },
+    {
+      "name": "installed_binary_identity",
+      "result": "PASS",
+      "detail": "RetroArch and SwanStation SHA-256 values reproduced the Stage 1 inventory."
     }
   ]
 }
