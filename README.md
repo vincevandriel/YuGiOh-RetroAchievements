@@ -29,6 +29,11 @@ is established until it passes the later gates and separate final audit.
 
 - [Investigation Plan](docs/INVESTIGATION_PLAN.md) — ordered stages, exact
   procedures, deliverables, acceptance gates, and final audit.
+- [Remainder Execution Plan](docs/REMAINDER_EXECUTION_PLAN.md) — six bounded
+  execution phases mapping unfinished Stages 4–11 to cost-aware model and
+  reasoning assignments.
+- [Model and Reasoning Allocation Audit](docs/MODEL_REASONING_AUDIT.md) — review
+  of the proposed Terra/Sol ladder, escalation rules, and credit controls.
 - [Evidence Standard](docs/EVIDENCE_STANDARD.md) — fact IDs, confidence rules,
   contradiction handling, address notation, and repository rules.
 - [Preliminary Leads](docs/PRELIMINARY_LEADS.md) — source-grounded hypotheses
