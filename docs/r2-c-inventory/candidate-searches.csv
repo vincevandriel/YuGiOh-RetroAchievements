@@ -1,0 +1,7 @@
+search_id,scope,query_or_method,result,disposition,follow_up
+R2C-SEARCH-001,pinned rcheevos,rc_hash_generate and rc_hash_psx,PlayStation dispatch and dedicated hash function located,CANDIDATE,Review read set and error paths with generated fixtures
+R2C-SEARCH-002,pinned rcheevos,rc_client begin load frame media reset and read-memory symbols,Initial-load media-change callback frame and reset candidates located,CANDIDATE,Build complete caller/consumer graph
+R2C-SEARCH-003,pinned RetroArch,rcheevos load change disc test reset memory and hardcore symbols,Frontend lifecycle and feature-gate candidates located,CANDIDATE,Trace calls and compare bundled source to upstream
+R2C-SEARCH-004,pinned DuckStation,achievements game hash system lifecycle and frame symbols,Separate internal hash and RA-hash candidate functions located,CANDIDATE,Trace their inputs consumers and memory callback
+R2C-SEARCH-005,pinned RAWeb,game hash load compatibility and award request code,Load and award boundary candidates located,CANDIDATE,Review only authorization-safe server behavior and label deployed behavior unknown
+R2C-SEARCH-006,configured local emulator scope,Beetle PSX HW Beetle PSX and standalone DuckStation binaries,Not discovered in configured scope,AVAILABILITY_LIMIT,Retain unavailable rows; do not claim system-wide absence

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-09-14T23:21:54Z",
+  "result": "PASS_INITIAL_PACKET",
+  "checks": [
+    {
+      "name": "json_parse",
+      "result": "PASS",
+      "detail": "input-manifest.json parsed successfully."
+    },
+    {
+      "name": "csv_parse",
+      "result": "PASS",
+      "detail": "All initial R2-C CSV files parsed using Python csv.reader."
+    },
+    {
+      "name": "selected_source_hashes",
+      "result": "PASS",
+      "detail": "All selected source-file SHA-256 values were collected from the pinned local files."
+    },
+    {
+      "name": "private_content_scan",
+      "result": "PASS",
+      "detail": "No private disc path, proprietary disc byte, credential, cookie, or authenticated response is present in this initial packet."
+    },
+    {
+      "name": "r2c_closure",
+      "result": "NOT_RUN",
+      "detail": "R2-C is still in progress. R3 must trace consumers and call paths; R2-C has not issued any integrity conclusion."
+    }
+  ]
+}

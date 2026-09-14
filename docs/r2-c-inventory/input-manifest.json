@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "phase": "R2-C",
+  "phase_name": "rcheevos and emulator evidence inventory",
+  "observed_utc": "2026-09-14T23:21:54Z",
+  "status": "IN_PROGRESS",
+  "collection_mode": "read-only source and binary inventory",
+  "source_pins": {
+    "RetroAchievements/rcheevos": "c28462eafdbeb881a1d442754dd17aae5c4ab834",
+    "RetroAchievements/docs": "644cee5675de48d827417c2766a583ff61cfe4a7",
+    "RetroAchievements/RAWeb": "56cd88e57c6dc6994e130a918e3967f9b74e9eb9",
+    "libretro/RetroArch": "48cbdb2e78ea6c92ade103941c4958ea312a5995",
+    "stenzek/duckstation": "96268ab66aa60c434c512bba19d45c75fa7a1b36"
+  },
+  "selected_source_file_sha256": {
+    "rcheevos/src/rhash/hash.c": "d845e69dfd90d28518763a5b9840590a6ca481eef14925d3b24e624cbff96922",
+    "rcheevos/src/rhash/hash_disc.c": "7c0b1457f4d9d6cc5001f5780138cd7cc2988823c75bf2a893d4976ed9253ebe",
+    "rcheevos/src/rc_client.c": "5b2ccf65dc60cb30f2e23f211d8ab5969ec0d3cfabeaf18801965f08fd84a38a",
+    "retroarch/cheevos/cheevos.c": "ba6569dfece1b98c5cf8718fbfcf6291c766f02e0ffdacd553dd908ee5d8ca18",
+    "retroarch/deps/rcheevos/src/rhash/hash_disc.c": "2c76b0064068c58c2c7f0d35f7b7a710a2df1387eabcf8f9fe3026dde95860db",
+    "retroarch/deps/rcheevos/src/rc_client.c": "5b2ccf65dc60cb30f2e23f211d8ab5969ec0d3cfabeaf18801965f08fd84a38a",
+    "duckstation/src/core/achievements.cpp": "d688a3d64fa1cff16e74921cee8cd0460366c9ea1b1e702323a5e42aff9d3f16",
+    "duckstation/src/core/system.cpp": "8edaac99b61000b8a7e35f9fe4514c8d05b2dbca93b8139293f719f40463ea7e",
+    "raweb/app/Connect/Actions/GetAchievementSetsAction.php": "a5e09fa9e6a9038fb023ad6ac2c853734bda7627e4def49e5146bc6b3390206b",
+    "raweb/app/Connect/Actions/AwardAchievementAction.php": "13ffa7845be07367982bfb2e834d2b7a2e8371afa9a7272cd5b04a3cb090efbf"
+  },
+  "official_supported_playstation_integrations": [
+    "Beetle PSX HW (libretro core)",
+    "Beetle PSX (libretro core)",
+    "SwanStation (libretro core)",
+    "DuckStation (standalone emulator)"
+  ],
+  "public_snapshot_reference": "docs/r1-readiness/freshness-delta.csv",
+  "installed_binary_reference": "evidence/stage-01-provenance/emulator-binaries.csv",
+  "prohibited_content": [
+    "credentials",
+    "cookies",
+    "authenticated request headers or responses",
+    "private disc paths or proprietary bytes",
+    "raw achievement definitions",
+    "bypass or evasion material"
+  ],
+  "known_boundaries": [
+    "Source locations are candidates until R3 traces their consumers and call paths.",
+    "No installed frontend/core binary is source-mapped at this checkpoint.",
+    "RetroArch's bundled rc_client.c matches the selected upstream rcheevos file, but its bundled hash_disc.c does not; R3 must compare their behavior before carrying an upstream hash claim into a RetroArch integration row.",
+    "The deployed RetroAchievements service can differ from the pinned RAWeb source; deployment-specific behavior remains unproven."
+  ]
+}
