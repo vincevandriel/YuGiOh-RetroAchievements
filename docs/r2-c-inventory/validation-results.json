@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "observed_utc": "2026-09-14T23:21:54Z",
-  "result": "PASS_INITIAL_PACKET",
+  "observed_utc": "2026-09-16T01:46:04Z",
+  "result": "PASS_SOURCE_DISPOSITION_INCREMENT",
   "checks": [
     {
       "name": "json_parse",
@@ -26,7 +26,12 @@
     {
       "name": "private_content_scan",
       "result": "PASS",
-      "detail": "No private disc path, proprietary disc byte, credential, cookie, or authenticated response is present in this initial packet."
+      "detail": "No private disc path, proprietary disc byte, credential, cookie, authenticated response, raw achievement definition, or request-validation material is present in the packet."
+    },
+    {
+      "name": "integrity_keyword_consumer_disposition",
+      "result": "PASS",
+      "detail": "The 25 files from R2C-SEARCH-007 are grouped into twelve bounded source-only consumer dispositions. The review records the separate optional DuckStation image-verification path and does not claim runtime reachability, enforcement, installed-binary behavior, or a negative result."
     },
     {
       "name": "r2c_closure",

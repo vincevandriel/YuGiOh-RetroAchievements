@@ -7,13 +7,14 @@ the current supported PlayStation integrations.
 
 ## Status
 
-`IN_PROGRESS` as of 2026-09-14T23:21:54Z.
+`IN_PROGRESS` as of 2026-09-16T01:46:04Z.
 
 The first bounded source-review pass is complete. It resolved the selected
 RetroArch bundled-source provenance difference and added the initial
-load/frame/media/reset/memory-reader skeleton. The packet remains in progress
-until the complete candidate inventory and per-integration handoff are
-validated.
+load/frame/media/reset/memory-reader skeleton. The bounded integrity-keyword
+consumer review is also complete: all 25 initial file hits are dispositioned in
+`integrity-hit-dispositions.csv`. The packet remains in progress until the
+complete acquisition/coverage audit and per-integration handoff are validated.
 
 The packet intentionally does **not** close canonical Stages 7 or 8. It does
 not claim that an unreviewed candidate path is reachable in a released binary,
@@ -47,6 +48,12 @@ run the planned safe fixture tests before any bounded negative conclusion.
   leads rather than conclusions.
 - `source-review-notes.md` — bounded source observations and explicit
   non-conclusions from the first review pass.
+- `integrity-hit-dispositions.csv` — complete source-only disposition of the
+  initial integrity-keyword search hits; it distinguishes identification,
+  optional image-verification, definition fingerprinting, and unrelated
+  mechanisms without making an installed-binary or enforcement claim.
+- `consumer-review-notes.md` — review method, key observations, and retained
+  uncertainty for the disposition ledger.
 - `facts.csv` and `contradictions.csv` — the initial ledger state.
 
 The R2-C pass gate still requires all acquisition output digests, a complete
