@@ -7,14 +7,19 @@ the current supported PlayStation integrations.
 
 ## Status
 
-`IN_PROGRESS` as of 2026-09-16T01:46:04Z.
+`BLOCKED-INPUT` as of 2026-09-16T02:01:05Z.
 
 The first bounded source-review pass is complete. It resolved the selected
 RetroArch bundled-source provenance difference and added the initial
 load/frame/media/reset/memory-reader skeleton. The bounded integrity-keyword
 consumer review is also complete: all 25 initial file hits are dispositioned in
-`integrity-hit-dispositions.csv`. The packet remains in progress until the
-complete acquisition/coverage audit and per-integration handoff are validated.
+`integrity-hit-dispositions.csv`. The acquisition/coverage audit is now also
+complete. It established that the source inventory is complete for the current
+four-entry public support list, but it cannot close R2-C: the installed
+RetroArch and SwanStation binaries are not source-mapped, while the two Beetle
+cores and standalone DuckStation are unavailable in the configured local
+scope. Those input gaps are now an explicit phase block rather than an implied
+negative conclusion.
 
 The packet intentionally does **not** close canonical Stages 7 or 8. It does
 not claim that an unreviewed candidate path is reachable in a released binary,
@@ -54,8 +59,16 @@ run the planned safe fixture tests before any bounded negative conclusion.
   mechanisms without making an installed-binary or enforcement claim.
 - `consumer-review-notes.md` — review method, key observations, and retained
   uncertainty for the disposition ledger.
+- `support-refresh.md` — timestamped current official PlayStation support-list
+  refresh, recorded without account state or game content.
+- `acquisition-coverage.csv` — requirement-by-requirement R2-C coverage and
+  pass/block disposition, including the exact effect of each unavailable input.
+- `phase-report.md` — model-assignment record, outcome, scope, confidence
+  ceilings, and next eligible work.
 - `facts.csv` and `contradictions.csv` — the initial ledger state.
 
-The R2-C pass gate still requires all acquisition output digests, a complete
-review inventory, and a prohibited-content scan. This initial packet is the
-first frozen increment toward that gate.
+All R2-C artifacts are digested and the inventory/coverage requirements that
+do not need unavailable inputs are complete. The independent R2-C pass gate is
+blocked only on the enumerated binary/source availability inputs. Static
+source work may be reused later with its stated limits, but R2-C has not
+issued any binary-behavior or final integrity conclusion.

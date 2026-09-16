@@ -2,8 +2,8 @@
   "schema_version": 1,
   "phase": "R2-C",
   "phase_name": "rcheevos and emulator evidence inventory",
-  "observed_utc": "2026-09-14T23:21:54Z",
-  "status": "IN_PROGRESS",
+  "observed_utc": "2026-09-16T02:01:05Z",
+  "status": "BLOCKED-INPUT",
   "collection_mode": "read-only source and binary inventory",
   "source_pins": {
     "RetroAchievements/rcheevos": "c28462eafdbeb881a1d442754dd17aae5c4ab834",
@@ -30,7 +30,7 @@
     "SwanStation (libretro core)",
     "DuckStation (standalone emulator)"
   ],
-  "public_snapshot_reference": "docs/r1-readiness/freshness-delta.csv",
+  "public_snapshot_reference": "docs/r2-c-inventory/support-refresh.md",
   "installed_binary_reference": "evidence/stage-01-provenance/emulator-binaries.csv",
   "prohibited_content": [
     "credentials",
@@ -44,6 +44,8 @@
     "Source locations are candidates until R3 traces their consumers and call paths.",
     "No installed frontend/core binary is source-mapped at this checkpoint.",
     "RetroArch's bundled rc_client.c matches the selected upstream rcheevos file, but its bundled hash_disc.c does not; R3 must compare their behavior before carrying an upstream hash claim into a RetroArch integration row.",
-    "The deployed RetroAchievements service can differ from the pinned RAWeb source; deployment-specific behavior remains unproven."
+    "The deployed RetroAchievements service can differ from the pinned RAWeb source; deployment-specific behavior remains unproven.",
+    "The current official PlayStation support-list refresh still has four entries: Beetle PSX HW, Beetle PSX, SwanStation, and standalone DuckStation.",
+    "R2-C cannot receive an independent pass until each installed binary is source-mapped or the affected integration is unavailable with a recorded rationale."
   ]
 }

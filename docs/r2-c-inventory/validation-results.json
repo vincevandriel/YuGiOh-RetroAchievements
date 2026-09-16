@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "observed_utc": "2026-09-16T01:46:04Z",
-  "result": "PASS_SOURCE_DISPOSITION_INCREMENT",
+  "observed_utc": "2026-09-16T02:01:05Z",
+  "result": "BLOCKED_INPUT_COVERAGE_AUDITED",
   "checks": [
     {
       "name": "json_parse",
@@ -34,9 +34,19 @@
       "detail": "The 25 files from R2C-SEARCH-007 are grouped into twelve bounded source-only consumer dispositions. The review records the separate optional DuckStation image-verification path and does not claim runtime reachability, enforcement, installed-binary behavior, or a negative result."
     },
     {
+      "name": "official_support_list_refresh",
+      "result": "PASS",
+      "detail": "The current official PlayStation table was refreshed and still lists Beetle PSX HW, Beetle PSX, SwanStation, and standalone DuckStation. Each has a binary/source inventory row."
+    },
+    {
+      "name": "r2c_acquisition_coverage",
+      "result": "PASS_WITH_INPUT_BLOCKS",
+      "detail": "All available source and configured-scope binary inventory requirements are covered and digested. Exact source mapping for installed RetroArch and SwanStation is unavailable; Beetle PSX HW, Beetle PSX, and standalone DuckStation are unavailable in the configured scope."
+    },
+    {
       "name": "r2c_closure",
-      "result": "NOT_RUN",
-      "detail": "R2-C is still in progress. R3 must trace consumers and call paths; R2-C has not issued any integrity conclusion."
+      "result": "BLOCKED-INPUT",
+      "detail": "R2-C cannot independently pass until binary/source mapping or an explicit affected-integration unavailability resolution is available. The R2-C static packet remains valid with its Medium binary-confidence ceiling."
     }
   ]
 }
