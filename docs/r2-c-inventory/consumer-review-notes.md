@@ -1,6 +1,6 @@
 # R2-C bounded integrity-candidate consumer review
 
-**Observation time:** 2026-09-16T01:46:04Z  
+**Observation time:** 2026-09-16T01:46:04Z
 **Scope:** pinned source only; no game emulator authenticated service or
 achievement asset was launched modified or queried.
 
