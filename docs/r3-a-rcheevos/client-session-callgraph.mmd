@@ -1,0 +1,35 @@
+flowchart TD
+  A[Frontend or caller invokes identify and load] --> B[rc_client_begin_identify_and_load_game]
+  B --> C[Hash source media or supplied data]
+  C --> D[rc_client_load_game]
+  D --> E[Local client hash record]
+  E --> F{Known game ID?}
+  F -->|No| G[Resolve hash through configured server callback]
+  F -->|Yes| H[Fetch game sets through configured server callback]
+  G --> H
+  H --> I[Parse and prepare game subsets]
+  I --> J[Start session through configured server callback]
+  J --> K[rc_client_activate_game]
+  K --> L[Validate requested asset addresses through read-memory callback]
+  L --> M[Activate runtime assets]
+  M --> N[rc_client_do_frame]
+  N --> O[Update runtime memrefs through configured read-memory callback]
+  O --> P[Evaluate active achievements leaderboards and Rich Presence]
+  P --> Q[Raise pending events]
+  Q --> R[Award or leaderboard request through configured server callback]
+
+  M --> S[Explicit media change only]
+  S --> T[rc_client_begin_identify_and_change_media]
+  T --> U[Hash unless cached path record is reused]
+  U --> V[Resolve changed-media hash when required]
+  V --> W[Change media internal]
+
+  M --> X[Reset]
+  X --> Y[Check existing client game-hash record then reset runtime]
+  M --> Z[Progress deserialization]
+  Z --> AA[Deserialize runtime progress; no hash call in reviewed path]
+  M --> AB[Unload]
+  AB --> AC[Detach game and cancel game-related scheduled work]
+
+  classDef boundary fill:#fff2cc,stroke:#a67c00,color:#000;
+  class G,H,J,R,V boundary;

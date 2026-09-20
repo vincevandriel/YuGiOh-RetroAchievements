@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-09-20T11:43:34Z",
+  "result": "PASS_SOURCE_ONLY_SUBSECTION",
+  "checks": [
+    {
+      "name": "json_parse",
+      "result": "PASS",
+      "detail": "R3-A JSON artifacts parsed successfully."
+    },
+    {
+      "name": "csv_parse",
+      "result": "PASS",
+      "detail": "All R3-A CSV files parse with stable column counts."
+    },
+    {
+      "name": "source_pins_and_selected_hashes",
+      "result": "PASS",
+      "detail": "Pinned rcheevos and RetroArch revisions are clean and every selected source/test SHA-256 matches input-manifest.json."
+    },
+    {
+      "name": "call_graph_coverage",
+      "result": "PASS",
+      "detail": "The packet includes PS1 identification, load/session, frame, explicit media change, reset, progress deserialization, unload, and external-boundary rows."
+    },
+    {
+      "name": "fixture_status_integrity",
+      "result": "PASS",
+      "detail": "Every A0-A6 relation is marked NOT_RUN. The packet contains a specification only and claims no generated or executed fixture result."
+    },
+    {
+      "name": "prohibited_content_scan",
+      "result": "PASS",
+      "detail": "No credential, cookie, private path, target-game byte, raw achievement definition, or evasion instruction is stored in the packet."
+    },
+    {
+      "name": "r3_overall_closure",
+      "result": "NOT_ELIGIBLE",
+      "detail": "R3-A is a source-only subsection. Fixture execution and blocked R2 dependencies remain outstanding."
+    }
+  ]
+}

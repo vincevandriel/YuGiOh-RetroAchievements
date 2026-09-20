@@ -1,0 +1,25 @@
+flowchart TD
+  A[Caller supplies PlayStation console ID plus file path or buffer] --> B[rc_client_begin_identify_and_load_game]
+  B --> C[rc_hash_generate or rc_hash_iterate]
+  C --> D[rc_hash_generate]
+  D --> E{Iterator has buffer?}
+  E -->|No: ordinary media path| F[rc_hash_from_file]
+  E -->|Yes| G[Buffer-specific dispatch outside this CD fixture path]
+  F --> H{Path extension is m3u?}
+  H -->|Yes| I[Playlist hash path]
+  H -->|No| J[rc_hash_psx]
+  J --> K[Open track 1]
+  K --> L[Find SYSTEM.CNF then parse BOOT cdrom entry]
+  L --> M{Boot executable found?}
+  M -->|No| N[Find PSX.EXE fallback]
+  M -->|Yes| O[Read primary executable header]
+  N --> O
+  O --> P{PS-X EXE marker present?}
+  P -->|Yes| Q[Use header payload length plus 2048-byte header]
+  P -->|No| R[Retain directory-record file size]
+  Q --> S[Append executable name then selected executable bytes to MD5]
+  R --> S
+  S --> T[Finalize identifier hash]
+
+  classDef boundary fill:#fff2cc,stroke:#a67c00,color:#000;
+  class G,I boundary;

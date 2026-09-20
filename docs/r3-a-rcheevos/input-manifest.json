@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "phase": "R3-A",
+  "phase_name": "rcheevos source call graphs and neutral fixture specification",
+  "observed_utc": "2026-09-20T11:43:34Z",
+  "status": "COMPLETE-SOURCE-ONLY",
+  "collection_mode": "read-only pinned-source review and fixture design only",
+  "source_pins": {
+    "RetroAchievements/rcheevos": "c28462eafdbeb881a1d442754dd17aae5c4ab834",
+    "libretro/RetroArch": "48cbdb2e78ea6c92ade103941c4958ea312a5995"
+  },
+  "selected_source_file_sha256": {
+    "rcheevos/src/rhash/hash.c": "d845e69dfd90d28518763a5b9840590a6ca481eef14925d3b24e624cbff96922",
+    "rcheevos/src/rhash/hash_disc.c": "7c0b1457f4d9d6cc5001f5780138cd7cc2988823c75bf2a893d4976ed9253ebe",
+    "rcheevos/src/rc_client.c": "5b2ccf65dc60cb30f2e23f211d8ab5969ec0d3cfabeaf18801965f08fd84a38a",
+    "rcheevos/test/rhash/test_hash_disc.c": "9e476414eb6bde89dd789950d5ee55cb9fbfbc3b9f2f0653937102d0a0430746",
+    "rcheevos/test/Makefile": "9dcbd61428baa6cbbf4c254b75e71316b62aa08fd7871eddfe09477b68066b85",
+    "retroarch/cheevos/cheevos.c": "ba6569dfece1b98c5cf8718fbfcf6291c766f02e0ffdacd553dd908ee5d8ca18"
+  },
+  "upstream_test_evidence": {
+    "test_file": "rcheevos/test/rhash/test_hash_disc.c",
+    "relevant_cases": [
+      "normal PlayStation CD",
+      "missing SYSTEM.CNF fallback",
+      "executable in subfolder",
+      "extra slash normalization"
+    ],
+    "execution_status": "NOT_RUN_IN_R3A"
+  },
+  "fixture_execution_status": "NOT_RUN",
+  "prohibited_content": [
+    "target-game media or bytes",
+    "modified target-game testing",
+    "credentials or session secrets",
+    "raw achievement definitions",
+    "live unlock or leaderboard activity",
+    "bypass evasion or concealment instructions"
+  ],
+  "known_boundaries": [
+    "Only the pinned source paths and documented static calls are covered.",
+    "External-client dispatch and deployed server behavior are outside this source-only packet.",
+    "The current asset address set cannot be derived without the separately blocked authorized definition snapshot.",
+    "Fixture predictions require a later generated neutral fixture run before being treated as tested behavior.",
+    "Installed frontend/core binaries remain source-unmapped under R2-C."
+  ]
+}
